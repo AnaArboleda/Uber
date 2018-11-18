@@ -131,7 +131,7 @@ CREATE TABLE servicios (
    Id_usuario INT,
    tipo_servicio VARCHAR2(50),
    Id_ubicacion INT ,
-   tiempo_viaje VARCHAR2(255),
+   tiempo_viaje NUMBER,
    direccion_origen VARCHAR2(255),
    direccion_destino VARCHAR2(255),
    tarifa_dinamica VARCHAR2(10),
