@@ -132,9 +132,9 @@ END;
 --NO_DATA_FOUND
 
 
-BEGIN 
-dbms_output.put_line('El resultado es: ' || VALOR_DISTANCIA(20.68,'cucuta'));
-END;
+--BEGIN 
+--dbms_output.put_line('El resultado es: ' || VALOR_DISTANCIA(20.68,'cucuta'));
+--END;
 
 
 ---------------PUNTO NO.6 ------------------------------------------
@@ -171,9 +171,9 @@ WHEN OTHERS THEN
 dbms_output.put_line('No se ha encontrado el registro');
 END;
 
-BEGIN 
-dbms_output.put_line('El resultado es: ' || VALOR_TIEMPO(28,'Medellìn'));
-END;
+--BEGIN 
+--dbms_output.put_line('El resultado es: ' || VALOR_TIEMPO(28,'Medellìn'));
+--END;
 
 ---------------PUNTO NO.7 ------------------------------------------
 /*
@@ -229,19 +229,3 @@ BEGIN
 END;
 
 --EXEC CALCULAR_TARIFA(2001);
-
-/*
-SELECT DISTINCT SV.ID,SV.ESTADO_SERVICIO, CI.TARIFA_BASE, 
- SV.TIEMPO_VIAJE, SV.DISTANCIA,SV.VALOR_SERVICIO,
- SUM(DF.VALOR)OVER(PARTITION BY DF.ID_SERVICIO),CI.CIUDAD
- --INTO estado, tarifa_base, tiempo_viaje,distancia,detalle_viaje,ciudad_viaje
- FROM SERVICIOS SV
- INNER JOIN CIUDADES CI ON CI.ID = SV.ID_CIUDAD
- INNER JOIN DETALLES_FACTURAS DF ON DF.ID_SERVICIO = SV.ID
- WHERE SV.ID = '2001';
- */
-/*
-UPDATE SERVICIOS SE
-  SET SE.VALOR_SERVICIO = 50000
-  WHERE SE.ID = '2001';
-*/
